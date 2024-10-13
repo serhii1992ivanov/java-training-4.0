@@ -47,4 +47,17 @@ public class Student {
         // TODO return String with name and rating of this student
         return "";
     }
+    public static void main(String [] args) {
+        Student s1 = new Student();
+        s1.setName("Petro");
+        s1.setRating(12);
+
+        Student s2 = new Student();
+        s2.setName("Mykola");
+        s2.setRating(10);
+
+        Student s3 = new Student();
+        s3.setName("Hrisha");
+        s3.setRating(11);
+    }
 }
