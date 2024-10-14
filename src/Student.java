@@ -77,8 +77,17 @@ public class Student {
         Student s3 = new Student("Hrisha");
         s3.setRating(11);
 
-        System.out.println("Average rating of all students: " + Student.getAvgRating());
+        System.out.println("Initial rating of " + s1.getName() + ": " + s1.getRating());
+        System.out.println("Initial rating of " + s2.getName() + ": " + s2.getRating());
+        System.out.println("Initial rating of " + s3.getName() + ": " + s3.getRating());
 
+        System.out.println("Average rating of all students: " + Student.getAvgRating());
+        
+        s1.changeRating(20);
+
+        // Display new rating and updated average rating
+        System.out.println("New rating of " + s1.getName() + ": " + s1.getRating());
+        System.out.println("Updated average rating of all students: " + Student.getAvgRating());
     }
 
 
