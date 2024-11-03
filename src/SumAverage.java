@@ -1,5 +1,5 @@
 /**
- * Compute the sum and average for running integers using loop.
+ * Compute the sum and average for running integers using loops.
  */
 public class SumAverage {
 
@@ -11,8 +11,11 @@ public class SumAverage {
      * @return sum of integers
      */
     public static int sum(int lowerBound, int upperBound) {
-        // TODO fill in code here using for loop and replace the return statement
-        return -1;
+        int total = 0;
+        for (int i = lowerBound; i <= upperBound; i++) {
+            total += i;
+        }
+        return total;
     }
 
     /**
@@ -22,8 +25,11 @@ public class SumAverage {
      * @return sum of integers
      */
     public static int sum(int[] numbers) {
-        // TODO fill in code here using for each loop and replace the return statement
-        return -1;
+        int total = 0;
+        for (int number : numbers) {
+            total += number;
+        }
+        return total;
     }
 
     /**
@@ -34,8 +40,9 @@ public class SumAverage {
      * @return average of integers
      */
     public static double average(int lowerBound, int upperBound) {
-        // TODO fill in code here using while loop and replace the return statement
-        return -1;
+        int total = sum(lowerBound, upperBound);
+        int count = (upperBound - lowerBound + 1); // Total numbers from lowerBound to upperBound
+        return count > 0 ? (double) total / count : 0; // Avoid division by zero
     }
 
     /**
@@ -45,7 +52,28 @@ public class SumAverage {
      * @return average of integers
      */
     public static double average(int[] numbers) {
-        // TODO fill in code here using do-while loop and replace the return statement
-        return -1;
+        int total = 0;
+        int count = 0;
+        int index = 0;
+
+        do {
+            if (index < numbers.length) {
+                total += numbers[index];
+                count++;
+            }
+            index++;
+        } while (index < numbers.length);
+
+        return count > 0 ? (double) total / count : 0; // Avoid division by zero
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        System.out.println("Sum from 1 to 10: " + sum(1, 10)); // 55
+        System.out.println("Average from 1 to 10: " + average(1, 10)); // 5.5
+
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println("Sum of array: " + sum(numbers)); // 15
+        System.out.println("Average of array: " + average(numbers)); // 3.0
     }
 }
