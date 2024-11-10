@@ -22,8 +22,17 @@ public class ArraysTest {
                         new String[]{"here", "is", "some", "text", ".", "text"},
                         new String[]{"some", "text", "above", "."},
                         new String[]{"some", "text", "."}
+                },
+                {
+                        new String[]{"lion", "tiger", "elephant"},
+                        new String[]{"tiger", "koala", "giraffe", "elephant"},
+                        new String[]{"tiger", "elephant"}
+                },
+                {
+                        new String[]{"John", "Sarah", "Michael"},
+                        new String[]{"Anna", "Sarah", "Michael", "David"},
+                        new String[]{"Sarah", "Michael"}
                 }
-                // TODO add 2 more test data here
         };
     }
 
